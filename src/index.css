@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6366f1;
+  --secondary: #22d3ee;
+  --accent: #fb923c;
+  --success: #22c55e;
+  --warning: #facc15;
+  --error: #ef4444;
+  --background: #f9fafb;
+}
+
+@layer base {
+  html {
+    font-family: 'Baloo 2', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-[var(--background)] text-gray-800;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 font-semibold rounded-full transition-transform duration-200 active:scale-95;
+  }
+  
+  .btn-primary {
+    @apply bg-[var(--primary)] text-white hover:bg-indigo-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-[var(--secondary)] text-white hover:bg-cyan-600;
+  }
+  
+  .btn-accent {
+    @apply bg-[var(--accent)] text-white hover:bg-orange-600;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl p-6 shadow-lg;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-gray-300 focus:border-[var(--primary)] focus:outline-none text-base;
+  }
+  
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .bounce {
+    animation: bounce 1s ease infinite;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Add this to your CSS if not already present */
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
