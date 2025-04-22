@@ -238,7 +238,7 @@ const TalkWithMomo: React.FC = () => {
   };
   
   return (
-    <div className="pb-16 flex flex-col h-[calc(100vh-16rem)]">
+    <div className="pb-16 flex flex-col h-[calc(100vh-12rem)]">
       <div className="flex items-center gap-2 mb-4">
         <button
           onClick={() => navigate('/home')}
@@ -257,7 +257,7 @@ const TalkWithMomo: React.FC = () => {
       {/* Main content area - side by side layout */}
       <div className="flex flex-row gap-4 flex-grow">
         {/* 3D Character - Left side */}
-        <div className="card w-1/3 flex items-center justify-center">
+        <div className="card w-1/3 flex items-center justify-center h-112">
           <Momo3D speaking={isSpeaking} />
         </div>
         
@@ -266,7 +266,7 @@ const TalkWithMomo: React.FC = () => {
           {/* Chat area */}
           <div 
             ref={chatContainerRef}
-            className="card flex-grow overflow-y-auto mb-4 p-4"
+            className="card flex-grow overflow-y-auto mb-4 p-4 h-96"
           >
             {conversations.map((conversation) => (
               <div
